@@ -1,0 +1,83 @@
+.image {
+  position: relative;
+}
+
+.background {
+  background-color: var(--accent);
+  width: 25rem;
+  height: 25rem;
+  animation: slide-left 0.8s both;
+}
+
+.photo {
+  width: 25rem;
+  height: 25rem;
+  position: absolute;
+  bottom: 1rem;
+  left: 1rem;
+  animation: slide-in 1s;
+}
+
+@keyframes slide-left {
+  0% {
+    transform: translateX(-100%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slide-in {
+  0% {
+    transform: translate3d(-100px, 100px, 0) scale3d(1, 1, 1) ;
+  }
+}
+
+@media (max-width: 1800px) {
+  .background {
+    width: 23rem;
+    height: 23rem;
+  }
+  
+  .photo {
+    width: 23rem;
+    height: 23rem;
+  }
+}
+
+@media (max-width: 1200px) {
+  .background {
+    width: 20rem;
+    height: 20rem;
+  }
+  
+  .photo {
+    width: 20rem;
+    height: 20rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .background {
+    width: 16rem;
+    height: 16rem;
+  }
+  
+  .photo {
+    width: 16rem;
+    height: 16rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .background {
+    width: 12rem;
+    height: 12rem;
+  }
+  
+  .photo {
+    width: 12rem;
+    height: 12rem;
+  }
+}

@@ -1,0 +1,55 @@
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+}
+
+.skill {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.skill svg {
+  fill: var(--accent);
+}
+
+.title {
+  font-size: 1.5rem;
+  color: var(--light);
+  margin-top: 1rem;
+}
+
+@media (max-width: 1200px) {
+  .skills {
+    gap: 30px;
+  }
+
+  .title {
+    font-size: 1.2rem;
+    margin-top: 0.8rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .skills {
+    gap: 20px;
+  }
+
+  .title {
+    font-size: 1rem;
+    margin-top: 0.8rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .skills {
+    gap: 15px;
+  }
+
+  .title {
+    font-size: 0.8rem;
+    margin-top: 0.6rem;
+  }
+}

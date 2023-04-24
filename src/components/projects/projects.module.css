@@ -1,0 +1,170 @@
+.projects {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3rem;
+  padding: 2rem 0;
+}
+
+.project {
+  border: 1px solid rgba(134, 64, 72, 0.4);
+  padding: 1rem;
+  display: grid;
+  box-sizing: border-box;
+}
+
+.image {
+  width: 100%;
+}
+
+.title {
+  font-weight: 700;
+  font-size: 1.5rem;
+  line-height: 2.3rem;
+  color: var(--accent);
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.description {
+  font-size: 1.1rem;
+  line-height: 1.4rem;
+  color: var(--dark);
+  margin: 1rem 0 0.5rem;
+}
+
+.more {
+  font-size: 1.1rem;
+  line-height: 1.4rem;
+  color: var(--dark);
+}
+
+.more:hover {
+  filter: brightness(90%);
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  align-self: flex-end;
+  margin-top: 1rem;
+}
+
+.tech {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  font-size: 1rem;
+  line-height: 29px;
+  color: var(--accent);
+}
+
+.tech li {
+  position: relative;
+  margin-right: 1rem;
+}
+
+.tech li::after { 
+  content: "";
+  position: absolute;
+  bottom: 45%;
+  right: -0.6rem;
+  display: block;
+  height: 4px;
+  width: 4px;
+  border-radius: 1rem;
+  background: var(--accent);
+}
+
+.tech li:last-child::after { 
+  content: unset;
+}
+
+.icons {
+  display: flex;
+  gap: 1.1rem;
+}
+
+.icons svg {
+  fill: var(--dark);
+}
+
+.link {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  color: var(--dark);
+  font-size: 1.1rem;
+  line-height: 1.1rem;
+}
+
+.link:hover {
+  filter: brightness(90%);
+}
+
+.project:hover {
+  background-color: var(--accent);
+}
+
+.project:hover > div p,
+.project:hover div ul,
+.project:hover a,
+.project:hover div a {
+  color: var(--white);
+}
+
+.project:hover div ul li::after { 
+  background: var(--white);
+}
+
+.project:hover div a svg {
+  fill: var(--white);
+}
+
+@media (max-width: 1200px) {
+  .projects {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 700px) {
+  .projects {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 2rem;
+    padding: unset;
+  }
+}
+
+@media (max-width: 500px) {
+  .title {
+    font-size: 1.3rem;
+    line-height: 1.3rem;
+  }
+
+  .description {
+    font-size: 0.9rem;
+    line-height: 1.2rem;
+  }
+  
+  .more {
+    font-size: 0.9rem;
+    line-height: 1rem;
+  }
+
+  .tech {
+    font-size: 0.9rem;
+    line-height: 1.1rem;
+  }
+
+  .icons {
+    gap: 1rem;
+  }
+  
+  .link {
+    gap: 0.3rem;
+    font-size: 0.9rem;
+    line-height: 1rem;
+  }
+}

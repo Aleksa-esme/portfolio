@@ -1,0 +1,105 @@
+.footer {
+  background-color: var(--accent);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+}
+
+.button {
+  background-color: transparent;
+  border: unset;
+  cursor: pointer;
+  margin-bottom: 1rem;
+  transition: all .2s ease-in;
+}
+
+.button svg {
+  transform: rotate(180deg);
+  fill: var(--white);
+}
+
+.button:hover {
+  transform: translateY(-2px);
+}
+
+.mail {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  color: var(--white);
+  text-decoration: none;
+}
+
+.mail:hover {
+  filter: brightness(90%);
+}
+
+.icons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+
+.icon {
+  transition: all .2s ease-in;
+}
+
+.icon:hover {
+  transform: translateY(-2px);
+}
+
+.icon svg{
+  fill: var(--white);
+}
+
+.line {
+  width: 30vw;
+  margin: 2rem;
+}  
+
+.location {
+  font-size: 1.2rem;
+  line-height: 1rem;
+  color: var(--light);
+}
+
+@media (max-width: 1200px) {
+  .mail {
+    font-size: 1.3rem;
+    line-height: 1.8rem;
+  }
+
+  .line {
+    margin: 1.5rem;
+  }  
+}
+
+@media (max-width: 700px) {
+  .footer {
+    padding: 1rem;
+  }
+
+  .button {
+    margin-bottom: 0.7rem;
+  }
+
+  .mail {
+    font-size: 1.2rem;
+    line-height: 1.7rem;
+  }
+
+  .line {
+    margin: 1rem;
+  } 
+
+  .location {
+    font-size: 1rem;
+    line-height: 1rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .line {
+    width: 50vw;
+  } 
+}

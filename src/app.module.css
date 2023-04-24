@@ -1,0 +1,218 @@
+@font-face {
+  font-family: 'Montserrat';
+  src: url('assets/fonts/Montserrat-Regular.ttf') format('woff2');
+  font-display: swap;
+  font-weight: 400;
+  font-style: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat';
+}
+
+.body {
+  width: 100%;
+  min-width: 320px;
+}
+
+.main {
+  max-width: 1350px;
+  margin: 0 auto;
+  padding: 0 8vw;
+}
+
+.greeting {
+  height: calc(100vh - 8vh);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.me {
+  display: flex;
+  align-items: center;
+  margin-top: 4rem;
+}
+
+.text {
+  font-size: 2.5rem;
+  line-height: 3.7rem;
+  color: var(--black);
+  margin-left: 7rem;
+}
+
+.name {
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.title {
+  font-size: 2.2rem;
+  line-height: 3.7rem;
+  color: var(--black);
+  margin-bottom: 3rem;
+}
+
+.skills {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.portfolio {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 2rem;
+}
+
+.about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 6rem;
+}
+
+.about_text {
+
+  text-align: justify;
+  font-size: 1.1rem;
+  line-height: 1.5rem;
+  margin: 1rem 0;
+}
+
+.about_list {
+  font-size: 1.1rem;
+  line-height: 1.5rem;
+  list-style: none;
+  position: relative;
+  margin-left: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.about_list::before { 
+  content: "";
+  position: absolute;
+  top: 40%;
+  left: -1rem;
+  display: block;
+  height: 6px;
+  width: 6px;
+  border-radius: 1rem;
+  background: var(--accent);
+}
+
+.about_link {
+  color: var(--accent);
+  padding: 0 0.2rem;
+}
+
+:root {
+  --white: #fff;
+  --black: #000;
+  --dark: #1E1E1E;
+  --accent: #864048;
+  --light: #9B9596;
+}
+
+
+@media (max-width: 1800px) {
+  .text {
+    font-size: 2.3rem;
+    line-height: 3.5rem;
+  }
+}
+
+@media (max-width: 1200px) {
+  .text {
+    font-size: 1.9rem;
+    line-height: 3rem;
+    margin-left: 5rem;
+  }
+
+  .title {
+    font-size: 2rem;
+    line-height: 3.4rem;
+    margin-bottom: 2rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .greeting {
+    height: unset;
+  }
+
+  .me {
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+  }
+
+  .text {
+    font-size: 1.4rem;
+    line-height: 2.2rem;
+    margin-left: 3rem;
+  }
+}
+
+@media (max-width: 700px) {
+  .title {
+    font-size: 1.8rem;
+    line-height: 3rem;
+    margin-bottom: 1rem;
+  }
+
+  .me {
+    display: flex;
+    flex-direction: column;
+    margin-top: 3rem;
+  }
+
+  .text {
+    font-size: 1.2rem;
+    line-height: 1.6rem;
+    margin-left: unset;
+    margin-top: 1rem;
+    text-align: center;
+  }
+
+  .about {
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .main {
+    padding: 0 3vw;
+  }
+
+  .title {
+    font-size: 1.2rem;
+    line-height: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  .me {
+    margin-top: 2rem;
+  }
+
+  .text {
+    font-size: 1.1rem;
+    line-height: 1.4rem;
+  }
+
+  .about_text {
+    font-size: 0.8rem;
+    line-height: 1.2rem;
+    margin: 0.8rem 0;
+  }
+  
+  .about_list {
+    font-size: 0.8rem;
+    line-height: 1.3rem;
+    margin-bottom: 0.2rem;
+  }
+}
